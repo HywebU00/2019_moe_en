@@ -333,7 +333,6 @@
     .Im_block {
         position: relative;
         background: #fff;
-        display: block;
         margin-right: 30px;
         overflow: hidden;
         transition: all .3s;
@@ -343,6 +342,12 @@
             margin: 0 15px;
         }
 
+        a{
+            display:block;
+            &:focus{
+                box-shadow: 0 0px 0px 2px #527a20 inset;
+            }
+        }
         // &:first-child{
         //     margin-left:0;
         // }
