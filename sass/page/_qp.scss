@@ -1,0 +1,17 @@
+.qp{
+	margin: 1em auto;
+	@include box-sizing;
+	padding:1em;
+    &:before {
+        content: "";
+        display: table;
+        clear:both;
+    }
+    .form_grid{
+        width: 80%;
+        margin: 1em auto;
+        @include screen('mobile'){
+          width:100%;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.category {
+    @extend %clearfix;
+    text-align: left;
+    margin: 1em auto;
+    ul {
+        @include li-reset;
+        li {
+            margin: 0px 5px 3px 0px;
+            display: block;
+            float: left;
+        }
+    }
+    a {
+        background-color: #000;
+        border: 0;
+        padding: .65em 1em;
+        min-width: 8em;
+        display: block;
+        text-align: center;
+        color: #fff;
+        @include box-sizing();
+        border-radius: 2px;
+        &:hover,
+        &:focus {
+            color: #FFF;
+            background-color: $secondaryColor;
+            box-shadow: none;
+        }
+        &.active {
+            color: #FFF;
+            background-color: $primaryColor;
+        }
+        span {
+            font-size: .813em;
+            &:before {
+                content: "(";
+                display: inline-block;
+            }
+            &:after {
+                content: ")";
+                display: inline-block;
+            }
+        }
+    }
+}

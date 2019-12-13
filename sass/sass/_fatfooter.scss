@@ -1,0 +1,144 @@
+.fatfooter {
+    @include make-fatfooter($fatfooter-length, 100%);
+    @extend %clearfix;
+    overflow: hidden;
+    padding-bottom: 1em;
+    margin: 0 auto;
+    background: $fatfooterBgColor;
+    //   @include screen('mobile') {
+    //     display: none;
+    // }
+    .container {
+        overflow: hidden;
+        @include box-sizing;
+        @include gutter;
+    }
+    // 按鈕
+    .btn-fatfooter {
+        font-size: .813em;
+        display: block;
+        min-width: 6em;
+        color: #FFF;
+        border: none;
+        background: #000;
+        position: absolute;
+        right: 1%;
+        z-index: 90;
+        text-indent: -9999px;
+        @include border-radius(0);
+        &:before {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #FFF;
+            border-left: none;
+            border-bottom: none;
+            transform: rotate(-45deg);
+            left: 50%;
+            top: 12px;
+            margin-left: -6px;
+            transition: .3s ease-out;
+        }
+        &:hover,
+        &:focus {
+            background: $aHover;
+            color: #fff;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+        }
+        &.close {
+            &:before {
+                transform: rotate(135deg) !important;
+                top: 5px;
+            }
+        }
+    }
+    nav {
+        overflow: hidden;
+        display: block;
+        position: relative;
+        padding: 3em 0 0 2em;
+        //column-count: 3;
+        @include box-sizing;
+        @include screen('mobile') {
+            padding: 1em 0;
+        }
+        ul {
+            @include li-reset;
+            @include screen('mobile') {
+                width: 100%;
+                display: block;
+                margin: 0px auto;
+            }
+            li {
+                display: inline-block;
+                //float: left;
+                overflow:auto;
+                text-align: left;
+                vertical-align: top;
+                margin: 0 -5px 1em 0;
+                width:25%;
+                //-webkit-column-break-inside: avoid;
+                @include box-sizing;
+                @include screen('mobile') {
+                    display: block;
+                    margin:0 0 .4em;
+                    width:100%;
+                }
+                a {
+                    line-height: 1.5;
+                    display: block;
+                    font-weight: bold;
+                    padding: .5em 0px;
+                    color:#010202;
+                    @include box-sizing;
+                    &:hover{
+                        box-shadow: none;
+                        color: $aHover;
+                    }
+                }
+                ul {
+                    margin-top: 5px;
+                    @include screen('mobile') {
+                        width: auto;
+                    }
+                    li {
+                        display: block;
+                        margin: 0;
+                        border: none;
+                        background: none;
+                        width: 100%;
+                        @include screen('mobile') {
+                            display:inline-block;
+                            width:auto;
+                        }
+                        a {
+                            display: block;
+                            @include aSetting_nocolor;
+                            font-weight: normal;
+                            text-align: left;
+                            font-size: .813em;
+                            line-height: 1.5em;
+                            padding: .5em .2em;
+                            background: none;
+                            font-weight: bold;
+                            @include screen('mobile') {
+                                padding:.3em .2em;
+                            }
+                        }
+                    }
+                    //第三層關閉
+                    ul {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

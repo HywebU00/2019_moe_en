@@ -1,0 +1,145 @@
+// tab的外框線
+a:focus {
+    outline: none;
+    box-shadow: 0 0px 0px 1px $aHover inset;
+    @include screen('mobile') {
+        box-shadow: none;
+    }
+}
+
+// 導盲磚
+.accesskey {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 9;
+    color: #fff;
+    font-size: $font-size;
+    @include screen("mobile") {
+        display: none;
+    }
+}
+
+// more按鈕
+a.more {
+    display: inline-block;
+    position: relative;
+    z-index: 50;
+    height: 2em;
+    margin: .5em auto .5em;
+    line-height: 2em;
+    font-size: .938em;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    vertical-align: middle;
+    color:#000;
+    text-transform:uppercase;
+    padding:0 .5em 0 2.5em;
+    transition:all .3s ease-out;
+    @include screen("mobile") {
+        margin: .5em auto 1em;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: 10;
+        top: 50%;
+        left: 10px;
+        margin-top: -4px;
+        width:12px;
+        height:8px;
+        background: url(../images/arrow.png) no-repeat;
+        background-size: 100%;
+    }
+    &:before {
+        content: "";
+        width: 2em;
+        height: 2em;
+        border-radius:50%;
+        position: absolute;
+        left:0;
+        top: 0;
+        background: #000;
+        transition:all .3s ease-out;
+        z-index: -1;
+        outline:0;
+    }
+
+    &:hover,
+    &:focus,
+    &.active {
+        color: white;
+        box-shadow: 0 0 0 0;
+        &:after {
+            // -webkit-transform: scale(1);
+            // transform: scale(1);
+        }
+        &:before {
+            width:100%;
+            border-radius: 0;
+            outline:0;
+        }
+    }
+}
+
+// scrollTop
+.scrollToTop {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #FFF;
+    line-height: 50px;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    transition: .3s ease-out;
+    display: none;
+    z-index: 99999999;
+    text-indent: -999999px;
+    &:hover,&:focus{
+        background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
+        box-shadow:none;
+    }
+}
+
+// img
+img.img-responsive {
+    @include img-responsive();
+}
+// 表單必填
+.necessary {
+    color: red;
+    margin: 0px .2em;
+}
+
+.tooltip {
+    text-align: center;
+    padding: 40px 0;
+    span {
+        display: inline-block;
+        background: #DEDEDE;
+        text-align: center;
+        padding: 10px;
+        width: 100px;
+        height: 20px;
+        line-height: 20px;
+        vertical-align: baseline;
+    }
+    p>em {
+        color: red;
+    }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,763 @@
+.top {
+    position: relative;
+    background: #fff;
+    z-index: 0;
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+        z-index: -1;
+        width: 100%;
+        height: 180px;
+        //background:$primaryColor;
+        background: linear-gradient(270deg, $secondaryColor, $primaryColor) 0% 0% / 400% 400%;
+    }
+}
+
+// 首頁輪播
+// .mpSlider {
+//     width: 100%;
+//     padding-bottom: 3em;
+//     @include gutter(0);
+//     .img-container {
+//         @include aspect-ratio(5, 3);
+//         background:none;
+//     }
+// }
+
+.cardSlider{
+    .slick-list{
+        overflow:visible;
+    }
+}
+// 廣告輪播
+.adSlider {
+    @include gutter(70px);
+    margin-bottom: 20px;
+
+    @include screen('mobile') {
+        @include gutter();
+    }
+
+    .slick-prev {
+        background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+        background-size: 80%;
+        left: -15px;
+    }
+
+    .slick-next {
+        background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+        background-size: 80%;
+        right: -15px;
+    }
+
+    .img-container {
+        width: 165px;
+        height: 55px;
+        margin: 0px 15px;
+
+        a {
+            display: block;
+            text-align: center;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+
+        &:focus {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 0px 0px 3px $primaryColor inset;
+            }
+        }
+    }
+}
+
+.section {
+    padding: 5em 0;
+
+    @include screen('mobile') {
+        padding: 3em 0 2em 0;
+    }
+}
+
+.news {
+
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        display:flex;
+        width: 30px;
+        height: 100%;
+        background: $secondaryColor;
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+
+    h2 {
+        text-indent: -9999px;
+        background: url(../images/news_updates.png) no-repeat;
+        background-size: 100%;
+        width: 174px;
+        height: 61px;
+    }
+
+    .more {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+
+        @include screen('xs_mobile') {
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .news_list {
+        ul {
+            @include li-reset();
+        }
+
+        li {
+            background: $color-lightgray;
+            padding: 1em 0;
+            padding-left: .5em;
+            margin: .5em 0;
+            min-height: 5em;
+            display: flex;
+            align-items: center;
+            word-wrap: break-word;
+            transition: all .3s;
+            &:nth-child(3n+1) {
+                border-left: 4px solid $primaryColor;
+            }
+
+            &:nth-child(3n+2) {
+                border-left: 4px solid $secondaryColor;
+            }
+
+            &:nth-child(3n+3) {
+                border-left: 4px solid $lightColor;
+            }
+            &:hover{
+                background:darken($color-lightgray, 10);
+            }
+
+            a {
+                font-size: 1.125em;
+                color: #444;
+                font-weight: bold;
+                display: inline-block;
+                width: calc(100% - 105px);
+                padding: 0 .5em;
+                box-sizing: border-box;
+                vertical-align: middle;
+            }
+
+            time {
+                display: inline-block;
+                width: 105px;
+                margin-left: -4px;
+                text-align: center;
+                line-height: 4em;
+                font-size: .938em;
+                color: #777;
+                border-left: 1px solid $color-gray;
+                padding: 0 .5em;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .news_hasImg {
+        padding-top: .5em;
+
+        .single {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(8);
+            @include make-lg-column(8);
+            padding-right: 30px;
+
+            @include screen('tablet') {
+                padding-right: 0;
+            }
+
+            .text_wrap{
+                h3{
+                    @include screen('tablet'){
+                        float: none;
+                        width: 100%;
+                    }
+                }
+                time{
+                    @include screen('tablet') {
+                        float: none;
+                        width: 100%;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .mix {
+            @include make-xs-column(12);
+            @include make-sm-column(6);
+            @include make-md-column(4);
+            @include make-lg-column(4);
+        }
+
+        .news_block {
+            @include screen('tablet') {
+                padding:0 5px;
+            }
+        }
+
+        .img-container {
+            @include aspect-ratio(2, 1);
+        }
+
+        .text_wrap {
+            overflow: hidden;
+
+            @include screen('mobile') {
+                margin-bottom: 1em;
+            }
+
+            h3 {
+                float: left;
+                width: calc(100% - 140px);
+                word-wrap: break-word;
+                font-size: 1.125em;
+                font-weight: bold;
+                margin: .5em 0;
+
+                @include screen('xs_mobile') {
+                    float: none;
+                    width: 100%;
+                }
+
+                a {
+                    color: #444;
+                    &:hover{
+                        color:$aHover;
+                    }
+                }
+            }
+
+            time {
+                float: right;
+                font-size: .938em;
+                color: #777;
+                width: 105px;
+                margin: .65em 0;
+                text-align: right;
+
+                @include screen('xs_mobile') {
+                    float: none;
+                    width: 100%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .mix {
+        .news_block {
+            overflow: hidden;
+            padding-bottom: 15px;
+            @include make-xs-column(6);
+            @include make-sm-column(6);
+            @include make-md-column(12);
+            @include make-lg-column(12);
+        }
+
+        .img-container {
+            @include aspect-ratio(1, 1);
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+        }
+
+        .text_wrap {
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(6);
+            @include make-lg-column(6);
+            height: 100%;
+            padding-left: 15px;
+
+            @include screen('tablet') {
+                padding-left: 0;
+            }
+
+            h3 {
+                float: none;
+                width: auto;
+                margin: 0 0 .5em 0;
+
+                @include screen('tablet') {
+                    margin: .5em 0;
+                }
+            }
+
+            time {
+                float: none;
+                width: auto;
+                margin: .5em 0 0 0;
+                text-align: left;
+            }
+        }
+    }
+}
+
+.Im {
+    .Im_block {
+        position: relative;
+        background: #fff;
+        display: block;
+        margin-right: 30px;
+        overflow: hidden;
+        transition: all .3s;
+        transform: translateY(0);
+        transform-origin: center bottom;
+        @include screen('mobile') {
+            margin: 0 15px;
+        }
+
+        // &:first-child{
+        //     margin-left:0;
+        // }
+        // &:last-child{
+        //     margin-right: 0;
+        // }
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow:0 5px 10px rgba(0,0,0, .2);
+
+        }
+
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            @include aspect-ratio(2, 1);
+
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 70px;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+            }
+        }
+
+        h3 {
+            position: absolute;
+            bottom: 132px;
+            text-transform: capitalize;
+            font-size: 2.25em;
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            margin: 0;
+        }
+
+        p {
+            color: #555;
+            height: 5em;
+            font-size: 1.125em;
+            margin: 1em;
+            font-weight: bold;
+            overflow: hidden;
+            display: -webkit-inline-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            word-wrap: break-word
+        }
+    }
+}
+
+.howDoI {
+    position: relative;
+
+    .more {
+        position: absolute;
+        right: 30px;
+        top: -4px;
+
+        @include screen('xs_mobile') {
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    ul {
+        @include li-reset();
+    }
+
+    li {
+        padding: .5em 0;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 2px;
+            margin-right: .8em;
+            background: $primaryColor;
+            vertical-align: middle;
+        }
+
+        a {
+            color: $color-word;
+            font-size: 1.25em;
+            font-weight: bold;
+            vertical-align: middle;
+
+            &:hover {
+                color: darken($primaryColor, 10);
+            }
+        }
+    }
+}
+
+.study {
+
+    position: relative;
+
+    &:before {
+        content: "";
+        display:flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 100%;
+        background: $secondaryColor;
+
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+
+    h2 {
+        text-indent: -9999px;
+        background: url(../images/study_in_taiwan.png) no-repeat;
+        background-size: 100%;
+        width: 158px;
+        height: 95px;
+    }
+
+    .more {
+        position: absolute;
+        right: 30px;
+        top: 55px;
+
+        @include screen('xs_mobile') {
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .vedio {
+        background: $color-lightgray;
+        text-align: center;
+        padding: 1.2em;
+        min-height:465px;
+        @include make-xs-column(12);
+        @include make-sm-column(7);
+        @include make-md-column(8);
+        @include make-lg-column(8);
+        @include screen('tablet'){
+            min-height:380px;
+        }
+        @include screen('mobile') {
+            margin: 1em 0;
+        }
+
+        .img-container {
+            @include aspect-ratio(2, 1.1);
+            margin-bottom: 1em;
+
+            a {
+                display: block;
+                &:hover{
+                    &:after{
+                        background-color: rgba(0,0,0, .35);
+                    }
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, .5) url(../images/play.png) no-repeat center;
+                    transition: all .3s;
+                }
+            }
+        }
+
+        h3 {
+            color: $color-word;
+            font-size: 1.625em;
+            margin: 0;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        span {
+            display: block;
+            color: #606060;
+            font-size: .938em;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    .fb_plugin {
+        @include make-xs-column(12);
+        @include make-sm-column(5);
+        @include make-md-column(4);
+        @include make-lg-column(4);
+        padding-left: 30px;
+        text-align: center;
+        height:465px;
+        @include screen('tablet'){
+            height:380px;
+        }
+        @include screen('mobile') {
+            padding-left: 0;
+            margin: 1em 0;
+        }
+    }
+}
+
+
+.section {
+    &.more_help {
+        padding: 0;
+        .container {
+            position: relative;
+            height: 250px;
+            background: url(../images/contact_bg.jpg) no-repeat left 60px center;
+            background-size: contain;
+
+            @include screen('mobile'){
+                height:200px;
+                background-position: left 30px center;
+            }
+            @include screen('xs_mobile') {
+                // padding: 0;
+                // padding-top: 150px !important;
+                // background-position: center bottom 149px;
+                // height: auto;
+                background-position: left center;
+            }
+
+            .contact {
+                position: absolute;
+                right: 30px;
+                top: 0;
+                display: block;
+                background: linear-gradient(60deg, $primaryColor 50%, $secondaryColor 50%);
+                width: 400px;
+                height: 100%;
+                text-align: center;
+                @include screen('tablet'){
+                    width:33.33%;
+                }
+                @include screen('mobile'){
+                    width:45%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                @include screen('xs_mobile') {
+                    // position: static;
+                    width: 50%;
+                    // height: 150px;
+                    right:0;
+                }
+                a {
+                    display: block;
+                    color: #fff;
+                    font-size: 2.25em;
+                    font-weight: bold;
+                    width: auto;
+                    margin: 70px auto;
+                    line-height:1em;
+                    @include screen('mobile') {
+                        margin: 0;
+                    }
+                    &:hover{
+                        &:before{
+                            transform: scale(1.1);
+                        }
+                    }
+                    &:before {
+                        content: "";
+                        display: block;
+                        width: 63px;
+                        height: 63px;
+                        margin: 0 auto;
+                        background: url(../images/contactUs.png) no-repeat;
+                        background-size: contain;
+                        margin-bottom: 25px;
+                        transition: all .3s;
+                        @include screen('xs_mobile'){
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.policy {
+    font-weight: bold;
+    position: relative;
+
+    .img-container {
+        @include aspect-ratio(5, 1);
+        box-shadow: 4px 0 0 $secondaryColor;
+        @include screen('mobile') {
+            @include aspect-ratio(4, 1);
+        }
+    }
+
+    &:before {
+        content: "";
+        display:flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 30px;
+        height: 100%;
+        background: $primaryColor;
+
+        @include screen('mobile') {
+            display: none;
+        }
+    }
+
+    h2 {
+        text-indent: -9999px;
+        background: url(../images/new_southbound_policy.png) no-repeat;
+        background-size: 100%;
+        width: 265px;
+        height: 95px;
+    }
+
+    &>.more {
+        position: absolute;
+        right: 30px;
+        top: 55px;
+        @include screen('xs_mobile') {
+            position: relative;
+            right: 0;
+            top: 0;
+        }
+    }
+
+    .policy_content {
+        position:relative;
+        margin-top: 1.5em;
+        padding: 0 30px;
+        border-left: 2px solid $color-lightgray;
+        min-height:270px;
+        @include screen('mobile'){
+            padding:0;
+            border-left: 0;
+            border-bottom:1px solid #000;
+            min-height:auto;
+        }
+        &:nth-child(3n+1) {
+            padding-left: 0;
+            border-left: 0;
+
+            .tag {
+                color: $primaryColor;
+            }
+        }
+
+        &:nth-child(3n+2) {
+            .tag {
+                color: $secondaryColor;
+            }
+        }
+
+        &:nth-child(3n+3) {
+            padding-right: 0;
+
+            .tag {
+                color: $lightColor;
+            }
+        }
+
+        .tag {
+            font-size: 1.125em;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 1.875em;
+            color: #010202;
+            margin: .5em 0;
+            line-height: 1;
+        }
+
+        p {
+            font-size: 1em;
+            height: 92px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            @include screen('mobile'){
+                height:auto;
+                overflow:visible;
+                display:block;
+                margin:.5em 0;
+            }
+        }
+        .more{
+            position:absolute;
+            bottom:0;
+            left:auto;
+            @include screen('mobile'){
+                position:relative;
+            }
+        }
+
+    }
+
+}
