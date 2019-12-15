@@ -27,7 +27,7 @@
 //     }
 // }
 
-.cardSlider{
+.mpSlider, .cardSlider{
     .slick-list{
         overflow:visible;
     }
@@ -313,9 +313,15 @@
                 float: none;
                 width: auto;
                 margin: 0 0 .5em 0;
-
+                max-height: 140px;
+                overflow:hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 6;
                 @include screen('tablet') {
                     margin: .5em 0;
+                    max-height:100%;
+                    display:block;
                 }
             }
 
@@ -500,6 +506,7 @@
         }
         @include screen('mobile') {
             margin: 1em 0;
+            min-height:auto;
         }
 
         .img-container {
@@ -534,6 +541,11 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            @include screen('mobile'){
+                word-wrap:break-word;
+                white-space: normal;
+                text-align: left;
+            }
         }
 
         span {
@@ -544,6 +556,11 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            @include screen('mobile'){
+                word-wrap:break-word;
+                white-space: normal;
+                text-align: left;
+            }
         }
     }
     .fb_plugin {
@@ -554,6 +571,7 @@
         padding-left: 30px;
         text-align: center;
         height:465px;
+        overflow:hidden;
         @include screen('tablet'){
             height:380px;
         }
