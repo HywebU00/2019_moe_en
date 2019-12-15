@@ -220,6 +220,10 @@
     clear: both;
     .cp_slider {
         @include gutter;
+        .slick-dots{
+            margin:0;
+            left:0;
+        }
     }
     .img-container {
         margin: 0px 15px;
