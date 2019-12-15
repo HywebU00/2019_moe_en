@@ -13,12 +13,15 @@
     form{
         &.form_inline{
             .btn_grp{
+                margin:0 .5em;
                 .btn{
-                    margin-top: 0;
+                    margin: 0;
                     background:#fff;
                     min-width: 2.25em;
                     padding:.45em;
                     color:$primaryColor;
+                    border:1px solid $color-gray;
+                    border-radius: 5px;
                     &:hover{
                         background:$primaryColor;
                         color:#fff;
