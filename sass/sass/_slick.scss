@@ -64,9 +64,9 @@
         }
         a{
             .caption{
-                display:flex;
-                justify-content: center;
-                align-items: center;
+                display:block;
+                // justify-content: center;
+                // align-items: center;
                 width: 55%;
                 height:6em;
                 background:rgba(0,0,0, 1);
@@ -80,7 +80,7 @@
                     left:50%;
                     bottom:-20px;
                     margin-left: -40%;
-                    align-items: flex-start;
+                    //align-items: flex-start;
                     height: 6em;
                     padding:1.5em;
                 }
@@ -93,6 +93,7 @@
                 }
                 span{
                     max-height:2.5em;
+                    display:block;
                     display: -webkit-inline-box;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 2;

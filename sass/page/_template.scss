@@ -153,6 +153,7 @@ body {
         height:2em;
         margin-bottom: 1em;
         box-shadow: inset 0px 5px 8px 0px rgba(0,0,0,0.3);
+        background-color: $primaryColor;
         background:linear-gradient(90deg, $primaryColor 25%,$secondaryColor 75%);
 
     }
