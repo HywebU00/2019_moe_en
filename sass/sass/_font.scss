@@ -1,4 +1,4 @@
-@mixin fontSetting($FONT-SIZE:$font-size, $WEIGHT:bold) {
+@mixin fontSetting($FONT-SIZE:$font-size, $WEIGHT:normal) {
     font-size: $FONT-SIZE;
     font-weight: $WEIGHT;
     color: $color-word;
