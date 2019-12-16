@@ -8,16 +8,9 @@
     // 預設選單 ul
     clear: both;
     >ul {
-        text-align: right;
+        text-align: center;
         margin: 0;
         padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        @media screen and (max-width: 1100px) {
-            text-align: left;
-            justify-content: flex-start;
-        }
         // 第一層選單樣式
         >li {
             display: inline-block;
