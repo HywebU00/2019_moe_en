@@ -249,6 +249,9 @@
 
         .img-container {
             @include aspect-ratio(2, 1);
+            img{
+                opacity: 1;
+            }
         }
 
         .text_wrap {
