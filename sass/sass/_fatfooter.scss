@@ -123,11 +123,10 @@
                             @include aSetting_nocolor;
                             font-weight: normal;
                             text-align: left;
-                            font-size: .813em;
+                            font-size: .875em;
                             line-height: 1.5em;
                             padding: .5em .2em;
                             background: none;
-                            font-weight: bold;
                             @include screen('mobile') {
                                 padding:.3em .2em;
                             }
