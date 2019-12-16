@@ -27,7 +27,15 @@
 //     }
 // }
 
-.mpSlider, .cardSlider{
+.mpSlider{
+    .slick-list{
+         @include screen('mobile'){
+            overflow:visible;
+         }
+    }
+}
+
+.cardSlider{
     .slick-list{
         overflow:visible;
     }
