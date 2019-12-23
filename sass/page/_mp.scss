@@ -391,7 +391,9 @@
         &:hover {
             transform: translateY(-10px);
             box-shadow:0 5px 10px rgba(0,0,0, .2);
-
+            @include screen('mobile'){
+                transform: translateY(0);
+            }
         }
 
         .img-container {
@@ -618,7 +620,7 @@
             position: relative;
             height: 250px;
             background: url(../images/contact_bg.jpg) no-repeat left 60px center;
-            background-size: contain;
+            background-size: 95%;
 
             @include screen('mobile'){
                 height:200px;
