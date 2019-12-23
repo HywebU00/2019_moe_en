@@ -620,11 +620,12 @@
             position: relative;
             height: 250px;
             background: url(../images/contact_bg.jpg) no-repeat left 60px center;
-            background-size: 95%;
+            background-size: contain;
 
             @include screen('mobile'){
                 height:200px;
                 background-position: left 30px center;
+                background-size: 95%;
             }
             @include screen('xs_mobile') {
                 // padding: 0;
