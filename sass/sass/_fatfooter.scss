@@ -5,9 +5,9 @@
     padding-bottom: 1em;
     margin: 0 auto;
     background: $fatfooterBgColor;
-    //   @include screen('mobile') {
-    //     display: none;
-    // }
+    @include screen('mobile') {
+        display: none;
+    }
     .container {
         overflow: hidden;
         @include box-sizing;
