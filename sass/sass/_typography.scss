@@ -33,7 +33,7 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
     h3 {
         @include adjust-font-size-to($base-font-size*1.25, 2);
         @include padding-leader(0);
-        @include trailer(0);
+        @include trailer(1);
     }
     h4 {
         @include adjust-font-size-to($base-font-size*1.25, 2);
@@ -52,14 +52,14 @@ $grid-background-baseline-color: rgba(187, 187, 187, 0.4);
     }
     p {
         @include adjust-font-size-to($base-font-size*1, 2);
-        @include leader(0);
-        @include trailer(2);
+        @include leader(.5);
+        @include trailer(.5);
     }
     ul,
     ol {
         @include adjust-font-size-to($base-font-size*1, 2);
         @include leader(0);
-        @include trailer(2);
+        @include trailer(1);
     }
     dd,
     th,

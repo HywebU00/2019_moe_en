@@ -625,14 +625,11 @@
             @include screen('mobile'){
                 height:200px;
                 background-position: left 30px center;
-                background-size: 95%;
+
             }
             @include screen('xs_mobile') {
-                // padding: 0;
-                // padding-top: 150px !important;
-                // background-position: center bottom 149px;
-                // height: auto;
                 background-position: left center;
+                background-size: 95%;
             }
 
             .contact {
@@ -766,7 +763,7 @@
 
         &:nth-child(3n+2) {
             .tag {
-                color: $secondaryColor;
+                color: $secondaryColor_word;
             }
         }
 

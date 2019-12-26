@@ -75,7 +75,7 @@
                 }
                 time {
                     display: block;
-                    color: darken($secondaryColor, 10);
+                    color: $secondaryColor_word;
                     font-size: .938em;
                 }
             }
