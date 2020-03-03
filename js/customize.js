@@ -183,3 +183,15 @@ $(function() {
         $('.function_bar').css("right","-148px");
     });
 });
+$(function(){
+    $('#qStr').attr("placeholder", "Search");
+    $('.search input').focus(function() {
+        $('.search').addClass('sFocus');
+    });
+    $('#qStr').blur(function() {
+        if($('#qStr').val()==""){
+            $('.search').removeClass('sFocus');
+            $('#qStr').attr("placeholder", "Search");
+        }
+    });
+});

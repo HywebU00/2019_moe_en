@@ -475,7 +475,7 @@ $(function() {
     /////form表單 placeholder隱藏/////
     /*-----------------------------*/
     $('input,textarea').focus(function() {
-        $(this).removeAttr('placeholder');
+        $(this).attr('placeholder','');
     });
     $('input[type="checkbox"]').off().click(function(e) {
         $(this).blur();

@@ -65,7 +65,7 @@ body {
         position: fixed;
         right: 0;
         top: 25%;
-        z-index: 10;
+        z-index: 100;
         transition: all .5s;
         @include screen('mobile'){
             display:none;
@@ -87,6 +87,7 @@ body {
             a {
                 color: #fff;
                 vertical-align: middle;
+                font-size:.938em;
             }
             &:before {
                 content: "";
