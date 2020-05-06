@@ -12,9 +12,9 @@ table {
     }
     td {
         border: #ddd 1px solid;
-        word-break: break-all;
+        word-wrap:break-word;
         a {
-            word-break: break-all;
+            word-wrap:break-word;
         }
     }
     th {

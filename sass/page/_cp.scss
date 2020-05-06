@@ -86,6 +86,9 @@ h1.title, h2.title {
     a {
         @include aSetting;
     }
+    p{
+        word-wrap:break-word;
+    }
 }
 // 文章標籤
 div.tag {
