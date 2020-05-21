@@ -19,11 +19,11 @@
                     background:#fff;
                     min-width: 2.25em;
                     padding:.45em;
-                    color:$primaryColor;
+                    color: darken($primaryColor, 10);
                     border:1px solid $color-gray;
                     border-radius: 5px;
                     &:hover{
-                        background:$primaryColor;
+                        background:darken($primaryColor, 10);
                         color:#fff;
                     }
                 }
