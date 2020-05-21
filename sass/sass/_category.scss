@@ -23,12 +23,12 @@
         &:hover,
         &:focus {
             color: #FFF;
-            background-color: $secondaryColor;
+            background-color: darken($secondaryColor, 20);
             box-shadow: none;
         }
         &.active {
             color: #FFF;
-            background-color: $primaryColor;
+            background-color: darken($primaryColor,8);
         }
         span {
             font-size: .813em;

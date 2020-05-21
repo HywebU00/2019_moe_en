@@ -6,7 +6,7 @@
     font-size: .938em;
     @extend %clearfix; // outline: 1px solid red;
     span {
-        color: $primaryColor;
+        color: darken($primaryColor, 10);
         margin: 0px .5em;
         vertical-align:middle;
     }

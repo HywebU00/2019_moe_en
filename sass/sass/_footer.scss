@@ -97,7 +97,7 @@ footer {
         font-size: 0.813em;
         em {
             font-style: normal;
-            color: $primaryColor;
+            color: darken($primaryColor,10);
             padding: 0 .5em;
         }
     }

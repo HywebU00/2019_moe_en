@@ -22,13 +22,13 @@ $color-dark: 				#333;
 $color-hr:					#666;		  			 //hr顏色
 $color-word:				#444;                    //一般字的顏色
 // 連結顏色
-$aColor:					#6da22a;
+$aColor:					#4F840C;
 $aHover:					darken($aColor,10);
 
 // 表單focus顏色
-$form-focus:				#6da22a;				 //表單
-$form-btn:					#6da22a;				//表單
-$secondaryColor_word: #1999ab;
+$form-focus:				darken($primaryColor, 5);				 //表單
+$form-btn:					darken($primaryColor, 5);				//表單
+$secondaryColor_word:   darken($secondaryColor, 20);
 //-------------------------------------------------------------字型--------//
 
 // 字型設定
