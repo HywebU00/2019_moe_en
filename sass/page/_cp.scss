@@ -11,6 +11,9 @@ h1.title, h2.title {
         float:none;
         width:100%;
     }
+    ul, ol{
+        display: table;
+    }
     .date{
         float: left;
         margin:1em 0;
@@ -23,7 +26,7 @@ h1.title, h2.title {
     }
     .pic {
         float: left;
-        margin: 0px 2em 1em 0;
+        margin: 0px 1em 1em 0;
         width: auto;
         width: 45%;
         max-width: 400px;
