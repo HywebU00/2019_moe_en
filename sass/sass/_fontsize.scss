@@ -9,7 +9,7 @@
         color: #666;
     }
     ul {
-        display: inline-block;
+        display: inline-block!important;
         vertical-align: middle;
         @include li-reset;
         li {
