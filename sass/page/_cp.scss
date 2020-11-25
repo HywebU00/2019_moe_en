@@ -147,9 +147,13 @@ div.tag {
         list-style-type: none;
         padding: 0;
         margin-left: 1em;
+        display: block;
         @media screen and (max-width: 767px) {
             margin-left: 0;
         }
+    }
+    ol{
+        display: block;
     }
     li {
         position: relative;
@@ -382,6 +386,7 @@ div.tag {
     }
     ol,
     ul {
+        display: block;
         counter-reset: counter;
         list-style-type: none;
         padding: 0;
