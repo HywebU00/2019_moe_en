@@ -6,7 +6,7 @@ $(function() {
         dots: true,
         arrows: false,
         infinite: true,
-        speed: 3500,
+        speed: 500,
         autoplay: true,
         fade: true,
         lazyLoaded: true,
