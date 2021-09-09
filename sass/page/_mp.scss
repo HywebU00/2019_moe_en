@@ -93,10 +93,10 @@
 }
 
 .section {
-    padding: 5em 0;
+    margin: 5em 0;
 
     @include screen('mobile') {
-        padding: 3em 0 2em 0;
+        margin: 3em 0 2em 0;
     }
 }
 
@@ -697,7 +697,8 @@
 }
 
 
-.policy {
+.policy,
+.business {
     font-weight: bold;
     position: relative;
 
@@ -706,6 +707,9 @@
         box-shadow: 4px 0 0 $secondaryColor;
         @include screen('mobile') {
             @include aspect-ratio(4, 1);
+        }
+        &~.policy_content{
+            margin-top: 1.5em; 
         }
     }
 
@@ -745,7 +749,7 @@
 
     .policy_content {
         position:relative;
-        margin-top: 1.5em;
+        
         padding: 0 30px;
         border-left: 2px solid $color-lightgray;
         min-height:270px;
@@ -813,5 +817,39 @@
             }
         }
 
+    }
+}
+
+.business{
+    &:before{
+        background: $secondaryColor;
+    }
+}
+
+.banner_link{
+    a{
+        display: block;
+        &:focus{
+            box-shadow: 0 0px 0px 2px $aHover;
+        }
+        &:hover{
+            .img-container{
+                transform: translateY(2px);
+            }
+        }
+    }
+    .img-container{
+        @include aspect-ratio(7, 1);
+        box-shadow: 4px 0 0 $secondaryColor;
+        background: #fff;
+        transition: .3s ease-in;
+        @include screen('xs_mobile'){
+            @include aspect-ratio(3, 1);
+        }
+    }
+
+    img{
+        max-width: 1010px; 
+        width: 100%;  
     }
 }
