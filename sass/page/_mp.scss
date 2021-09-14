@@ -839,7 +839,7 @@
         }
     }
     .img-container{
-        @include aspect-ratio(7, 1);
+        @include aspect-ratio(4.1, 1);
         box-shadow: 4px 0 0 $secondaryColor;
         background: #fff;
         transition: .3s ease-in;
